@@ -4,7 +4,7 @@ export const get: APIRoute = async ({ params, request }) => {
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=${
       import.meta.env.WEATHER_API
-    }&q=Ahlden&days=4&alerts=no`
+    }&q=Ahlden&days=5&alerts=no`
   );
 
   return {

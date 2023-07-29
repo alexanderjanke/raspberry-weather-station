@@ -44,20 +44,23 @@ export default function App(props: Props) {
       {/* Forecast */}
       <div class="h-2/5 grid grid-flow-col items-center">
         <FutureDay
+          date={data().forecast.forecastday[1].date}
           maxTemp={data().forecast.forecastday[1].day.maxtemp_c}
           minTemp={data().forecast.forecastday[1].day.mintemp_c}
           icon={data().forecast.forecastday[1].day.condition.icon}
         />
         <FutureDay
+          date={data().forecast.forecastday[2].date}
           maxTemp={data().forecast.forecastday[2].day.maxtemp_c}
           minTemp={data().forecast.forecastday[2].day.mintemp_c}
           icon={data().forecast.forecastday[2].day.condition.icon}
         />
-        <FutureDay
+        {/* Can only use 2 days in free API */}
+        {/* <FutureDay
           maxTemp={data().forecast.forecastday[3].day.maxtemp_c}
           minTemp={data().forecast.forecastday[3].day.mintemp_c}
           icon={data().forecast.forecastday[3].day.condition.icon}
-        />
+        /> */}
       </div>
     </>
   );
