@@ -6,11 +6,10 @@ export interface Props {
 }
 
 export default function FutureDay(props: Props) {
-  const date = new Date(props.date);
   return (
     <div class="flex flex-col">
       <div class="text-center text-2xl text-white">
-        {date.toLocaleString("de-DE", { dateStyle: "full" })}
+        {new Date(props.date).toLocaleString("de-DE", { dateStyle: "full" })}
       </div>
       <div class="flex justify-center">
         <div>
