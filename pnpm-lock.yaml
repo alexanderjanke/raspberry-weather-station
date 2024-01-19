@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/node':
-    specifier: ^5.3.0
-    version: 5.3.0(astro@2.8.0)
+    specifier: ^8.0.0
+    version: 8.0.0(astro@2.8.0)
   '@astrojs/solid-js':
     specifier: ^2.2.0
     version: 2.2.0(@babel/core@7.22.8)(solid-js@1.7.7)
@@ -89,12 +89,11 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/node@5.3.0(astro@2.8.0):
-    resolution: {integrity: sha512-q7gJEPSZzC4FIRNmq3ks6mw0Jby4irXTfRhbOPOS4HRmbu4FDANnRqnZBOGe96cfBQTgDC3/FhQccDQtx+n4pg==}
+  /@astrojs/node@8.0.0(astro@2.8.0):
+    resolution: {integrity: sha512-qgLN2k0/GPHRNRYyXNMxx7bGR2DBNsVMWBv/S4w/q5LtsHNc+y2lhGsuk0Cz4xxvuORqXkJARjloDvtlpYwYzQ==}
     peerDependencies:
-      astro: ^2.7.0
+      astro: ^4.2.0
     dependencies:
-      '@astrojs/webapi': 2.2.0
       astro: 2.8.0
       send: 0.18.0
       server-destroy: 1.0.1
