@@ -10,8 +10,12 @@ export default function App(props: Props) {
   const [lastUpdateTime, setLastUpdateTime] = createSignal(new Date());
 
   async function fetchData() {
-    const response = await fetch("/api/weather");
-    setData(await response.json());
+    try {
+      const response = await fetch("/api/weather");
+      setData(await response.json());
+    } catch (error) {
+      // do nothing
+    }
   }
 
   setInterval(async () => {
