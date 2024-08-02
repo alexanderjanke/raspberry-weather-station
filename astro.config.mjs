@@ -10,5 +10,8 @@ export default defineConfig({
   integrations: [solidJs(), tailwind()],
   adapter: node({
     mode: "standalone"
-  })
+  }),
+  devToolbar: {
+    enabled: false
+  }
 });
