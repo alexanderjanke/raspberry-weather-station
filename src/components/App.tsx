@@ -12,6 +12,9 @@ export default function App(props: Props) {
   async function fetchData() {
     try {
       const response = await fetch("/api/weather");
+      if (response.status === 500) {
+        return;
+      }
       setData(await response.json());
     } catch (error) {
       // do nothing
