@@ -7,6 +7,7 @@ interface Props {
 
 export default function App(props: Props) {
   const [data, setData] = createSignal(props.data);
+  const [lastUpdateTime, setLastUpdateTime] = createSignal(new Date());
 
   async function fetchData() {
     const response = await fetch("/api/weather");
@@ -15,10 +16,12 @@ export default function App(props: Props) {
 
   setInterval(async () => {
     await fetchData();
+    setLastUpdateTime(new Date());
   }, 60000);
 
   return (
     <>
+      <div class="absolute left-2 top-2 text-white text-sm">zuletzt aktualisiert: {lastUpdateTime().toLocaleTimeString()}</div>
       {/* Today */}
       <div class="h-3/5 grid grid-flow-col px-14 gap-10">
         <div class="flex items-center gap-5 text-8xl font-semibold text-white">
